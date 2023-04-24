@@ -2,9 +2,10 @@ import { getProjects } from "../models/projects.server";
 import AboutMe from "../components/aboutme";
 import Projects from "../components/projects";
 import { useLoaderData } from "@remix-run/react";
-export const loader = async () => {
-  return getProjects();
-}
+// export const loader = async () => {
+  
+//   return getProjects();
+// }
 export const meta = () => {
   return [
     { 
@@ -16,15 +17,15 @@ export const meta = () => {
 
 export default function Index() {
 
-  const {data : projectsList} = useLoaderData();
-  
+  // const {data : projectsList} = useLoaderData();
+   
 
   return (
     <div>
-      <main className="main">
+      <main>
         <AboutMe/>
         <Projects
-          projectsList = {projectsList}
+          // projectsList = {projectsList}
         />
       </main>
     </div>

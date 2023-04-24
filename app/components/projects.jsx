@@ -5,12 +5,13 @@ import {BsGithub} from 'react-icons/bs'
 
 const Projects = ({projectsList}) => {
 
+  if(!projectsList) return <h3>hola</h3>
   return (
     <div>
-        <h1>Projects</h1>
+        <h3>Projects</h3>
 
         <div>
-
+          
             <h1>{projectsList[0].attributes.title}</h1>
             <p>{projectsList[0].attributes.description}</p>
             <p>{projectsList[0].attributes.updateAt}</p>

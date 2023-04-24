@@ -1,5 +1,13 @@
 export async function getProjects() {
+    
     const response = await fetch(`http://localhost:1337/api/projects?populate=*`);
-    return await response.json()
+    try {
+       
+        return await response.json()
+    } catch (error) {
+        return await error.status(500)
+    }
+    
+  
 }
 

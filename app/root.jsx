@@ -29,7 +29,7 @@ const Normalize = {
     rel: 'stylesheet',
     href: 'https://necolas.github.io/normalize.css/8.0.1/normalize.css'
 };
-const DosisFont = [ 
+const OpenSansFont = [ 
     {
         rel: 'preconnect',
         href: 'https://fonts.googleapis.com'
@@ -41,7 +41,7 @@ const DosisFont = [
     }, 
     {
         rel: 'stylesheet',
-        href: "https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600;700&display=swap"
+        href: "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;1,300&display=swap",
     }
  ];
 
@@ -58,7 +58,7 @@ const DosisFont = [
     }, 
     {
         rel: 'stylesheet',
-        href: "https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;400;500&display=swap"
+        href: "https://fonts.googleapis.com/css2?family=Signika:wght@300;400;500;600;700&display=swap",
     }
 
 
@@ -71,9 +71,9 @@ const styleSheet = {
 export function links() {
   return [
       Normalize,
-      DosisFont[0],
-      DosisFont[1],
-      DosisFont[2],
+      OpenSansFont[0],
+      OpenSansFont[1],
+      OpenSansFont[2],
 
       SignikaFont[0],
       SignikaFont[1],
@@ -98,7 +98,7 @@ function Document({children}) {
               <Meta />
               <Links />
           </head>
-          <body>
+          <body className='main'>
               <Header />
               {children}
               <Footer />
@@ -114,8 +114,8 @@ export function CatchBoundary() {
   const error = useCatch()
   return (
       <Document>
-          <p className='error'>{error.status } {error.statusText}</p>
-          <Link className='error-enlace' to="/">Tal vez quieras volvera a la página principal</Link>
+          <p>{error.status} {error?.statusText}</p>
+          <Link>Tal vez quieras volvera a la página principal</Link>
       </Document>
   )
 }
@@ -123,8 +123,8 @@ export function CatchBoundary() {
 export function ErrorBoundary({error}) {
   return (
       <Document>
-          <p className='error'>{error.status } {error.statusText}</p>
-          <Link className='error-enlace' to="/">Tal vez quieras volvera a la página principal</Link>
+          <p>{error.status } {error?.statusText}</p>
+          <Link>Tal vez quieras volvera a la página principal</Link>
       </Document>
   )
 }
