@@ -1,9 +1,15 @@
 import React from 'react'
+import styles from "~/styles/about.module.css";
 
 const AboutMe = () => {
   return (
-    <div className='' id='#about'>
-         <h2>About me</h2>
+    <div className='about'>
+
+      <div className='container container-about'> 
+         <h2>My Story</h2>
+         <p className='border_bottom'>A really short one.</p>
+      </div>
+
         <p>
         
           I'm Daniel Mercedes, a Junior Software Developer originally from La Romana, 

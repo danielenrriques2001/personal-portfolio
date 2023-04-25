@@ -9,6 +9,9 @@ import {
 } from '@remix-run/react'
 
 import styles from '~/styles/index.css'
+import stylesAbout from '~/styles/about.module.css'
+import stylesProjects from '~/styles/projects.module.css'
+
 import Header from '~/components/header'
 import Footer from '~/components/footer'
 
@@ -68,6 +71,14 @@ const styleSheet = {
     rel: 'stylesheet',
     href: styles
 }
+const styleSheetAbout = {
+    rel: 'stylesheet',
+    href: stylesAbout
+}
+const styleSheetProjects = {
+    rel: 'stylesheet',
+    href: stylesProjects
+}
 export function links() {
   return [
       Normalize,
@@ -78,7 +89,9 @@ export function links() {
       SignikaFont[0],
       SignikaFont[1],
       SignikaFont[2],
-      styleSheet
+      styleSheet,
+      styleSheetAbout,
+      styleSheetProjects
     
   ]
 }
