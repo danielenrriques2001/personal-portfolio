@@ -1,3 +1,4 @@
+import { redirect } from '@remix-run/node'
 import { Link } from '@remix-run/react'
 import {BsGithub} from 'react-icons/bs'
 const ProjectItem = ({title, description, updateat, image, github, projectlink}) => {
@@ -6,7 +7,13 @@ const ProjectItem = ({title, description, updateat, image, github, projectlink})
 
   return (
     <div className='project__container'>
-                    <img src={image} alt = {'bla'}></img> 
+                    <div 
+                      className='img__container'
+                      
+                      >
+                      <img src={image} alt = {'bla'}></img> 
+                    </div>
+                   
                     <h4>{title}</h4>
                     <p>{description}</p>
                     <p>{updateat}</p>

@@ -32,23 +32,3 @@
 }
 
 
-.custom-shape-divider-top-1682513188 {
-    position: absolute;
-    top: -5rem;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    background-color: blue;
-}
-
-.custom-shape-divider-top-1682513188 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 223px;
-}
-
-.custom-shape-divider-top-1682513188 .shape-fill {
-    fill: #FFFFFF;
-}

@@ -55,7 +55,7 @@ h4 {font-size: 1.563rem;}
 
 h5 {font-size: 1.25rem;}
 
-p, a, button, input {
+p, a, button, input, ::before {
     font-family: 'Open Sans', sans-serif;
     line-height: 1.5;
     font-size: 1.5rem;
@@ -195,8 +195,13 @@ p, a, button, input {
     top: 0;
     left: 0;
     z-index: 15;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
  }
 
+ .nav p::first-letter {
+    font-weight: 900;
+ }
  
  .nav .nav__list {
   list-style: none;
@@ -219,7 +224,7 @@ p, a, button, input {
   background-color: transparent;
 }
 
-.nav button, a {
+.nav button, .nav a {
   border: 1px solid var(--gray25);
   border-radius: 45px;
 

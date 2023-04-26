@@ -36,9 +36,38 @@
     padding: 6px;
     cursor: pointer;
     transition: all 1s ease-out;
+
+    width: 100%;
 }
-.project__container img:hover {
-    background-color: var(--gray25);
+
+.img__container {
+    width: 50%;
+    margin: 0 auto;
+    cursor: pointer;
+    position: relative;
+}
+
+.img__container::before {
+    content: 'read more...';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: opacity .2s ease;
+    z-index: 15;
+    border-radius: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: #997711cd;
+    background-color: #404355;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    
+}
+.img__container:hover::before{
+   opacity: 1;
+   transition: opacity .2s ease;
 }
 
 
