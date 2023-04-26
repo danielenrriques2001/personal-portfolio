@@ -191,6 +191,10 @@ p, a, button, input {
     border-bottom: 1px outset var(--border-color);
     --border-color: #e7eef6;
     padding: 0px 45px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 15;
  }
 
  
@@ -203,6 +207,7 @@ p, a, button, input {
     color: var(--gray25);
     padding: 6px;
     font-size: 1.2rem;
+    margin: 5px;
   }
 
 .nav button {
@@ -211,6 +216,21 @@ p, a, button, input {
   font-weight: 550;
   cursor: pointer;
   color: var(--gray25);
+  background-color: transparent;
+}
+
+.nav button, a {
+  border: 1px solid var(--gray25);
+  border-radius: 45px;
+
+  transition: 1s all ease-in-out;
+}
+.nav button:hover, a:hover {
+
+  color: var(--ComplementaryColor);
+  background-color: var(--primaryColor);
+
+
 }
   
 .custom-shape-divider-bottom-1682511048 {
