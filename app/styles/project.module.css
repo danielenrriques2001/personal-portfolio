@@ -32,7 +32,15 @@
     border-radius: 45px;
     display: block;
     margin: 0 auto;
+    width: 15rem;
+    padding: 6px;
+    cursor: pointer;
+    transition: all 1s ease-out;
 }
+.project__container img:hover {
+    background-color: var(--gray25);
+}
+
 
 
 .project__container-links {
@@ -66,7 +74,6 @@
     --ComplementaryColor: #997611;
     --gray25: #404355;
     
-   background-color: var(--ComplementaryColor);
 
    padding: 8px 12px;
    border-radius: 45px;

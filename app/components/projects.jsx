@@ -5,6 +5,8 @@ const Projects = ({projectsList}) => {
 
   return (
     <div className='projects' id='projects'>
+
+                        
         <h2>Projects</h2>
         {
           !projectsList ? <p className='alert'>Content not found!</p> 
