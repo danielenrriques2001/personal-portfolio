@@ -1,7 +1,26 @@
+.projects {
+    width: 100%;
 
 
-.container-projects h2 {
+}
+
+.projects h2 {
     text-align: center;
     margin: 0 auto;
+}
 
+
+.projects__container {
+        display: grid;
+}
+
+@media (min-width: 769px) {
+    .projects__container {
+        
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    
+        
+    }
+    
 }

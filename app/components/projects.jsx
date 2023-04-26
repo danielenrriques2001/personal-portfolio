@@ -1,33 +1,29 @@
-import { Link, useLoaderData } from '@remix-run/react'
 import React from 'react'
-import {BsGithub} from 'react-icons/bs'
-
+import ProjectItem from './ProjectItem'
 
 const Projects = ({projectsList}) => {
 
   return (
-    <div>
-        <h3>Projects</h3>
-
+    <div className='projects' id='projects'>
+        <h2>Projects</h2>
         {
           !projectsList ? <p className='alert'>Content not found!</p> 
-          : ( <div>
+          : ( <div className='projects__container'>
             {
               projectsList.map((e) => {
                 return (
                   <>
-                    <h1>{e.attributes.title}</h1>
-                    <p>{e.attributes.description}</p>
-                    <p>{e.attributes.updateAt}</p>
-                    <img src={e.attributes?.image.data.attributes.formats.small.url} alt = {'bla'}></img> 
-                    <Link to={e.attributes.github}>
-                    <BsGithub/>
-                    </Link>
-                    <Link to={e.attributes.link}>
-                    Live Project
-                    </Link>
-                  
-                  </>
+                  <ProjectItem
+                    key={e.attributes?.github}
+                    title = {e.attributes?.title}
+                    description ={e.attributes?.description}
+                    updateat ={e.attributes?.updateAt}
+                    github ={e.attributes?.github}
+                    projectlink ={e.attributes?.link}
+                    image = {e.attributes?.image.data.attributes.formats.small.url}
+                  />
+                   
+                </>
                 )
               })
             }

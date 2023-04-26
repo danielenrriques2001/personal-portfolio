@@ -11,9 +11,11 @@ import {
 import styles from '~/styles/index.css'
 import stylesAbout from '~/styles/about.module.css'
 import stylesProjects from '~/styles/projects.module.css'
+import stylesProject from '~/styles/project.module.css'
 
 import Header from '~/components/header'
 import Footer from '~/components/footer'
+import Nav from './components/nav'
 
 export function meta() {
   return [
@@ -79,6 +81,10 @@ const styleSheetProjects = {
     rel: 'stylesheet',
     href: stylesProjects
 }
+const styleSheetProject = {
+    rel: 'stylesheet',
+    href: stylesProject
+}
 export function links() {
   return [
       Normalize,
@@ -91,7 +97,8 @@ export function links() {
       SignikaFont[2],
       styleSheet,
       styleSheetAbout,
-      styleSheetProjects
+      styleSheetProjects,
+      styleSheetProject
     
   ]
 }
@@ -111,12 +118,15 @@ function Document({children}) {
               <Meta />
               <Links />
           </head>
-          <body className='main'>
+          <body >
+          <Nav/>
+            <div className='main'>
               <Header />
               {children}
               <Footer />
               <Scripts />
               <LiveReload />
+              </div>
           </body>
       </html>
   )

@@ -4,7 +4,10 @@ function Footer() {
     <footer className="footer">
         <div className="contenedor contenido">
             <p className="copyright">All rights reserved { new Date().getFullYear() } Powered by - {''}
-            <span>Remix Run, Strapi, PostgrestSQL </span> </p>
+            <span className='title-word'>Remix Run</span>
+            <span className='title-word'>Strapi</span>
+            <span className='title-word'>Progrest SQL</span>
+           </p>
         </div>
     </footer>
   )
