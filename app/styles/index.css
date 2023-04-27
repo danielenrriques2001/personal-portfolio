@@ -17,7 +17,7 @@ html {
 }
 body {
  
-  background-color: var(--bgColor);
+  background-color: white;
   
 }
 h1, h2, h3, h4, h5 {
@@ -88,7 +88,7 @@ p, a, button, input, ::before {
  position: relative;
 
  margin-top: 2rem;
- background-color: white;
+ background-color: var(--bgColor);
 
 
 }
@@ -197,6 +197,14 @@ p, a, button, input, ::before {
     z-index: 15;
     padding-bottom: 1rem;
     padding-top: 1rem;
+    background-color: #cecece48;
+
+    cursor: pointer;
+    transition: all 1s ease-in-out;
+
+ }
+ .nav:hover {
+  background-color: #989292b2;
  }
 
  .nav p::first-letter {
@@ -207,7 +215,7 @@ p, a, button, input, ::before {
   list-style: none;
  }
 
-.nav__list a {
+.nav__list a, .nav a {
     text-decoration: none;
     color: var(--gray25);
     padding: 6px;
@@ -224,7 +232,7 @@ p, a, button, input, ::before {
   background-color: transparent;
 }
 
-.nav button, .nav a {
+.nav button, .nav a{
   border: 1px solid var(--gray25);
   border-radius: 45px;
 
@@ -255,5 +263,5 @@ p, a, button, input, ::before {
 }
 
 .custom-shape-divider-bottom-1682511048 .shape-fill {
-  fill: var(--bgColor);
+  fill: white;
 }

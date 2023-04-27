@@ -23,6 +23,7 @@ const Projects = ({projectsList}) => {
                     github ={e.attributes?.github}
                     projectlink ={e.attributes?.link}
                     image = {e.attributes?.image.data.attributes.formats.small.url}
+                    id = {e.id}
                   />
                    
                 </>

@@ -121,7 +121,6 @@ function Document({children}) {
           <body >
           <Nav/>
             <div className='main'>
-              <Header />
               {children}
               <Footer />
               <Scripts />

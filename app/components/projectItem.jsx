@@ -1,19 +1,23 @@
 import { redirect } from '@remix-run/node'
-import { Link } from '@remix-run/react'
+import { Link, useNavigate } from '@remix-run/react'
 import {BsGithub} from 'react-icons/bs'
-const ProjectItem = ({title, description, updateat, image, github, projectlink}) => {
+const ProjectItem = ({title, description, updateat, image, github, projectlink, id}) => {
 
 
 
   return (
     <div className='project__container'>
-                    <div 
-                      className='img__container'
-                      
-                      >
-                      <img src={image} alt = {'bla'}></img> 
-                    </div>
+                
+                     
+                    <Link to={`/${id}`}>
                    
+                      <div 
+                        className='img__container-dinamic'
+                        >
+                        <img src={image} alt = {'bla'}></img> 
+                      </div>
+                   
+                    </Link>
                     <h4>{title}</h4>
                     <p>{description}</p>
                     <p>{updateat}</p>
@@ -31,7 +35,11 @@ const ProjectItem = ({title, description, updateat, image, github, projectlink})
                       Live Project
                       </Link>
 
+                      
+
                     </div>
+
+                  
                    
                    
                   

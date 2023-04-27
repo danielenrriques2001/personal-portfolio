@@ -2,6 +2,7 @@ import { getProjects } from "../models/projects.server";
 import AboutMe from "../components/aboutme";
 import Projects from "../components/projects";
 import { useLoaderData } from "@remix-run/react";
+import Header from "../components/header";
 export const loader = async () => {
   
   return getProjects();
@@ -23,6 +24,7 @@ export default function Index() {
   return (
     <div>
       <main>
+        <Header/>
         <AboutMe/>
         <Projects
           projectsList = {projectsList}

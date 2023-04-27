@@ -1,11 +1,11 @@
 .projects {
+    --bgColor: #eeeff0;
+
     width: 100%;
     position: relative;
-    background-color: #FFFFFF;
+    background-color: var(--bgColor);
     border-bottom-left-radius: 120px;
     border-bottom-right-radius: 130px;
-    
-
 
 }
 
