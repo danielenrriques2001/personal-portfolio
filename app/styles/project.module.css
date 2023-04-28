@@ -28,7 +28,7 @@
 
 
 .project__container img {
-    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     border-radius: 45px;
     display: block;
     margin: 0 auto;
@@ -36,7 +36,7 @@
     padding: 6px;
     cursor: pointer;
     transition: all 1s ease-out;
-
+    background-color: #404355;
     width: 100%;
 }
 
@@ -49,48 +49,11 @@
 
 
 
-.img__container::before {
-    content: 'READ MORE...';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    opacity: 0;
-    transition: opacity .2s ease;
-    z-index: 15;
-    border-radius: 45px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-transform: uppercase;
-    
-    background: hsla(228, 52%, 20%, 1);
-
-    background: linear-gradient(45deg, hsla(228, 52%, 20%, 1) 0%, hsla(228, 42%, 42%, 1) 90%);
-
-    background: -moz-linear-gradient(45deg, hsla(228, 52%, 20%, 1) 0%, hsla(228, 42%, 42%, 1) 90%);
-
-    background: -webkit-linear-gradient(45deg, hsla(228, 52%, 20%, 1) 0%, hsla(228, 42%, 42%, 1) 90%);
-
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#18234D", endColorstr="#3F5199", GradientType=1 );
-
-    color: var(--bgColor);
-    
-}
-
-.img__container:hover::before{
-   opacity: 1;
-   transition: opacity .2s ease;
-}
-
-
-
 .project__container-links {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1rem;
-
-  
 }
 
 @media (min-width: 769px) {
@@ -100,29 +63,50 @@
     }
     
 }
-.project__container-links a {
+.project__container a {
     text-decoration: none;
     --gray50: #2b3049;
     color: var(--gray50);
     transition: all 1s ease-in-out;
-}
-.project__container-links a:hover {
-    --ComplementaryColor: #997611;
 
-    color: var(--ComplementaryColor);
-}
-
-.project__container-links a:nth-child(2) {
     --ComplementaryColor: #997611;
     --gray25: #404355;
     
 
-   padding: 8px 12px;
-   border-radius: 45px;
-   border: 1px solid var(--gray25)
+        padding: 6px 12px;
+        border-radius: 45px;
+        border: 1px solid var(--gray25)
+            
+        }
+
+.project__container-links a:first-of-type {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .45rem;
 }
 .project__container-links a:nth-child(2):hover {
 
     background-color: var(--gray50);
 
+}
+
+.img__container a:first-of-type {
+    --bgColor: var(--gray50);
+
+    position: absolute;
+    bottom: -5%;
+    right: -5%;
+    background-color: var(--ComplementaryColor);
+    color: #eeeff0;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+    border: none;
+}
+
+.project__container a:hover {
+    --ComplementaryColor: #997611;
+
+    color: var(--ComplementaryColor);
+    background-color: var(--gray50);
 }

@@ -6,7 +6,15 @@
     background-color: var(--bgColor);
     border-bottom-left-radius: 120px;
     border-bottom-right-radius: 130px;
+    padding-bottom: 5em;
+    
+}
 
+@media (min-width: 988px) {
+    .projects {
+       padding-bottom: 1.5rem;
+    }
+    
 }
 
 .projects h2 {
@@ -31,4 +39,22 @@
     
 }
 
+.custom-shape-divider-top-1682704980 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
 
+.custom-shape-divider-top-1682704980 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 149px;
+}
+
+.custom-shape-divider-top-1682704980 .shape-fill {
+    fill: #FFFFFF;
+}

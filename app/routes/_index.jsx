@@ -3,9 +3,17 @@ import AboutMe from "../components/aboutme";
 import Projects from "../components/projects";
 import { useLoaderData } from "@remix-run/react";
 import Header from "../components/header";
+import Stack from "../components/stack";
+
 export const loader = async () => {
-  
-  return getProjects();
+  const projects = await getProjects();
+  if(projects.data.length === 0) {
+    throw new Response('', {
+        status: 404,
+        statusText: 'project Not Found'
+    })
+}
+  return projects
 }
 export const meta = () => {
   return [
@@ -26,6 +34,7 @@ export default function Index() {
       <main>
         <Header/>
         <AboutMe/>
+        <Stack/>
         <Projects
           projectsList = {projectsList}
         />

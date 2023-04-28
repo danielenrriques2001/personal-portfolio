@@ -84,15 +84,30 @@ p, a, button, input, ::before {
  text-align: center;
  padding: 2rem 1rem;
  width: 100%;
- min-height: 730;
+ height: 730px;
  position: relative;
 
  margin-top: 2rem;
  background-color: var(--bgColor);
 
+ display: flex;
+ justify-content: center;
+ align-items: center;
+
+
+
 
 }
 
+@media (min-width: 998px) {
+  .header {
+    border-top-right-radius: 5rem;
+    border-top-left-radius: 10rem;
+  }  
+}
+.header a:hover {
+  background-color: transparent;
+}
 
 @media (min-width: 769px) {
   .header {
@@ -112,53 +127,30 @@ p, a, button, input, ::before {
 
   z-index: 15;
 
+  display: flex;
+
 
 }
 
-.title-word:nth-child(1) {
-  color: var(--ComplementaryColor);
-  font-weight: 800;
-  --color-1: #df753c;
-  --color-2: #3D8DAE;
-  --color-3: #ec7371;
 
-}
-.title-word:nth-child(2) {
-  color: var(--ComplementaryColorDark);
-  font-weight: 800;
-
-  --color-1: #b99343;
-  --color-2: #2f9488;
-  --color-3: #1a5458;
-}
-.title-word:nth-child(3) {
-  color: var(--thirdColor);
-  font-weight: 800;
-
-  --color-1: #936324;
-  --color-2: #be6664;
-  --color-3: #34a79f;
-}
 
 .title-word {
   transition: border-bottom 1s linear 1s;
   animation: color-animation 4s linear infinite;
   text-transform: uppercase;
   padding-left: 1rem;
+  font-weight: 800;
 
+  transition:  all 4s ease-in;
 
 
   
 }
 
 @keyframes color-animation {
-  0%    {color: var(--color-1)}
-  32%   {color: var(--color-1)}
-  33%   {color: var(--color-2)}
-  65%   {color: var(--color-2)}
-  66%   {color: var(--color-3)}
-  99%   {color: var(--color-3)}
-  100%  {color: var(--color-1)}
+  0%    {color: var(--ComplementaryColor)}
+  50%   {color: var(--ComplementaryColorDark)}
+  100%   {color: var(--ComplementaryColor)}
 }
 
 .container {
@@ -188,6 +180,7 @@ p, a, button, input, ::before {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: column;
     border-bottom: 1px outset var(--border-color);
     --border-color: #e7eef6;
     padding: 0px 45px;
@@ -203,6 +196,15 @@ p, a, button, input, ::before {
     transition: all 1s ease-in-out;
 
  }
+
+ @media (min-width: 768px) {
+
+  .nav {
+    flex-direction: row;
+
+  }
+  
+ }
  .nav:hover {
   background-color: #989292b2;
  }
@@ -213,6 +215,7 @@ p, a, button, input, ::before {
  
  .nav .nav__list {
   list-style: none;
+  
  }
 
 .nav__list a, .nav a {
@@ -221,15 +224,17 @@ p, a, button, input, ::before {
     padding: 6px;
     font-size: 1.2rem;
     margin: 5px;
+
   }
 
 .nav button {
-  padding: 6px;
+  padding: 6px 12px;
   border: none;
   font-weight: 550;
   cursor: pointer;
   color: var(--gray25);
   background-color: transparent;
+  
 }
 
 .nav button, .nav a{
@@ -246,22 +251,23 @@ p, a, button, input, ::before {
 
 }
   
-.custom-shape-divider-bottom-1682511048 {
+.custom-shape-divider-bottom-1682704396 {
   position: absolute;
-  bottom: -17rem;
+  bottom: 0;
   left: 0;
   width: 100%;
   overflow: hidden;
   line-height: 0;
+  transform: rotate(180deg);
 }
 
-.custom-shape-divider-bottom-1682511048 svg {
+.custom-shape-divider-bottom-1682704396 svg {
   position: relative;
   display: block;
   width: calc(100% + 1.3px);
-  height: 227px;
+  height: 150px;
 }
 
-.custom-shape-divider-bottom-1682511048 .shape-fill {
-  fill: white;
+.custom-shape-divider-bottom-1682704396 .shape-fill {
+  fill: #FFFFFF;
 }

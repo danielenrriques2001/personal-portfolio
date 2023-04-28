@@ -4,15 +4,9 @@ function Header() {
     return (
         <header className="header">
 
-            <div className="custom-shape-divider-bottom-1682511048">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" className="shape-fill"></path>
-                </svg>
-            </div>
+            
             <div>
                 
-            <h3>Daniel Mercedes</h3>
-
             <h1 className="title">
                 
                 Unlocking the power of 
@@ -20,6 +14,7 @@ function Header() {
                 <span className="title-word">true wizard🧙</span>
                 , I take your project to the 
                 <span className="title-word">next level!</span>
+                <p>(Yes, it's a mix of harry potter and coding Terminology)</p>
             </h1>
 
             <div className="container container__header-links">
@@ -43,9 +38,7 @@ function Header() {
                     target="_blank"
                 >
                 
-                    <img src="https://img.icons8.com/material-rounded/24/null/download--v1.png"/>
- 
-                 
+                    <img src="https://img.icons8.com/material-rounded/24/null/download--v1.png" alt="resume logo"/>
 
                 </Link>                
               
@@ -65,6 +58,11 @@ function Header() {
             </div>
 
            
+            <div class="custom-shape-divider-bottom-1682704396">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M1200 0L0 0 598.97 114.72 1200 0z" class="shape-fill"></path>
+                </svg>
+            </div>
           
         </header>   
     )
