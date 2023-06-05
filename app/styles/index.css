@@ -18,6 +18,8 @@ html {
 body {
  
   background-color: white;
+  margin: 0;
+  padding: 0;
   
 }
 h1, h2, h3, h4, h5 {
@@ -270,6 +272,7 @@ p, a, button, input, ::before {
   overflow: hidden;
   line-height: 0;
   transform: rotate(180deg);
+
 }
 
 .custom-shape-divider-bottom-1682704396 svg {
