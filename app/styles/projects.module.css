@@ -8,11 +8,13 @@
     border-bottom-right-radius: 130px;
     padding-bottom: 5em;
     
+    
 }
 
 @media (min-width: 988px) {
     .projects {
-       padding-bottom: 1.5rem;
+       padding-bottom: 10%;
+      
     }
     
 }

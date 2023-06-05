@@ -42,19 +42,20 @@ export default function Project() {
   const project = useLoaderData();
 
   const projectInfo = project?.data[0];
+  console.log(projectInfo.attributes?.image.data.attributes.formats)
 
   return (
-          <div className="project__container container">
+          <div className="project__container container-item">
             <div>
 
             </div>
             <h2>{projectInfo.attributes?.title}</h2>
               <img 
-                src={projectInfo.attributes?.image.data.attributes.formats.small.url}
+                src={projectInfo.attributes?.image.data.attributes.formats.large.url}
                 className="image__item"
                 alt={'this is image background item'}
                 >
-                
+                  
               </img>
               <p>{projectInfo.attributes?.description}</p>
               <div className="project__container-links">

@@ -78,11 +78,13 @@ p, a, button, input, ::before {
   background-color: rgb(247, 241, 241);
 }
 
-.container {
+.container-item {
   display: flex;
   text-align: center;
   justify-content: center;
   flex-direction: column;
+  text-align: center;
+  gap: 1rem;
 }
 
 .border_bottom {
