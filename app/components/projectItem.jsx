@@ -5,11 +5,11 @@ import {BsGithub} from 'react-icons/bs'
 const ProjectItem = ({title, description, updateat, image, github, projectlink, id}) => {
 
   const router = useNavigate();
+
   const redirectPage = (id) => {
     router(`/${id}`)
   }
 
-  console.log(router)
 
 
   return (

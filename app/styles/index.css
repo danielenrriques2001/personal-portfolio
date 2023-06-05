@@ -65,6 +65,8 @@ p, a, button, input, ::before {
 
 /*U  T  I  L  S */
 
+
+
 .main {
   width: 90%;
   margin: 0 auto;
@@ -74,6 +76,13 @@ p, a, button, input, ::before {
   text-align: center;
   color: var(--thirdColor);
   background-color: rgb(247, 241, 241);
+}
+
+.container {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .border_bottom {
@@ -271,3 +280,4 @@ p, a, button, input, ::before {
 .custom-shape-divider-bottom-1682704396 .shape-fill {
   fill: #FFFFFF;
 }
+

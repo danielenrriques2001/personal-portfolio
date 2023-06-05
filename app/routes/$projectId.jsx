@@ -1,4 +1,4 @@
-import { useLoaderData, useParams } from "@remix-run/react";
+import { Link, useLoaderData, useParams } from "@remix-run/react";
 import { getProject } from "../models/projects.server";
 import ProjectItem from "../components/projectItem";
 
@@ -44,19 +44,28 @@ export default function Project() {
   const projectInfo = project?.data[0];
 
   return (
-          <>
-                <ProjectItem
-                    key={projectInfo.attributes?.github}
-                    title = {projectInfo.attributes?.title}
-                    description ={projectInfo.attributes?.description}
-                    updateat ={projectInfo.attributes?.updateAt}
-                    github ={projectInfo.attributes?.github}
-                    projectlink ={projectInfo.attributes?.link}
-                    image = {projectInfo.attributes?.image.data.attributes.formats.small.url}
-                    id = {projectInfo.id}
-                  />
+          <div className="project__container container">
+            <div>
+
+            </div>
+            <h2>{projectInfo.attributes?.title}</h2>
+              <img 
+                src={projectInfo.attributes?.image.data.attributes.formats.small.url}
+                className="image__item"
+                alt={'this is image background item'}
+                >
+                
+              </img>
+              <p>{projectInfo.attributes?.description}</p>
+              <div className="project__container-links">
+        
+                <Link to={projectInfo.attributes?.github}>Github</Link>
+                <Link to={projectInfo.attributes?.link}>Live Project</Link>
+              </div>
+                  
+                 
           
-          </>
+          </div>
         
 
         )

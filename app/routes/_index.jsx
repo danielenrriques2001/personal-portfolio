@@ -3,7 +3,6 @@ import AboutMe from "../components/aboutme";
 import Projects from "../components/projects";
 import { useLoaderData } from "@remix-run/react";
 import Header from "../components/header";
-import Stack from "../components/stack";
 
 export const loader = async () => {
   const projects = await getProjects();
@@ -34,7 +33,6 @@ export default function Index() {
       <main>
         <Header/>
         <AboutMe/>
-        <Stack/>
         <Projects
           projectsList = {projectsList}
         />

@@ -110,3 +110,7 @@
     color: var(--ComplementaryColor);
     background-color: var(--gray50);
 }
+.image__item {
+    background-color: transparent !important;
+    padding: 45px !important;
+}
