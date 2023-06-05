@@ -145,7 +145,7 @@ export function CatchBoundary() {
 export function ErrorBoundary({error}) {
   return (
       <Document>
-          <p>{error.status } {error?.statusText}</p>
+          <p>{error} {error?.statusText}</p>
           <Link>Tal vez quieras volvera a la página principal</Link>
       </Document>
   )

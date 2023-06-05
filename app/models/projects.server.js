@@ -1,6 +1,6 @@
 export async function getProjects() {
     
-    const response = await fetch(`http://localhost:1337/api/projects?populate=*`);
+    const response = await fetch(`https://portfolio-backend-6b9i.onrender.com/api/projects?populate=*`);
     try {
        
         return await response.json()
@@ -13,7 +13,7 @@ export async function getProjects() {
 
 export async function getProject(id) {
     
-    const response = await fetch(`http://localhost:1337/api/projects?filters[id]=${id}&populate=image`);
+    const response = await fetch(`https://portfolio-backend-6b9i.onrender.com/projects?filters[id]=${id}&populate=image`);
     try {
        
         return await response.json()
